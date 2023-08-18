@@ -6,14 +6,19 @@ services:
     build:
       context: .
       target: php_prod
+    volumes:
+      - app_cache:/srv/app/bootstrap/cache
+      - app_storage:/srv/app/storage
     environment:
-      APP_SECRET: ${APP_SECRET}
-      MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET}
+      APP_KEY: ${APP_KEY}
+      APP_ENV: ${APP_ENV:-production}
+      APP_URL: ${APP_URL}
 
   caddy:
     build:
       context: .
       target: caddy_prod
-    environment:
-      MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
-      MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
+
+volumes:
+  app_cache:
+  app_storage:

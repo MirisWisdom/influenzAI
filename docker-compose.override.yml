@@ -15,6 +15,7 @@ services:
     environment:
       # See https://xdebug.org/docs/all_settings#mode
       XDEBUG_MODE: "${XDEBUG_MODE:-off}"
+      APP_DEBUG: 'true'
     extra_hosts:
       # Ensure that host.docker.internal is correctly defined on Linux
       - host.docker.internal:host-gateway
@@ -27,8 +28,16 @@ services:
     volumes:
       - ./public:/srv/app/public:ro
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
-    environment:
-      MERCURE_EXTRA_DIRECTIVES: demo
+
+  database:
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
 
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###

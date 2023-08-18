@@ -11,7 +11,7 @@ class QueryController extends Controller
     #[NoReturn]
     public function query(Request $request)
     {
-        $response = json_decode(Http::get('http://localhost:8001', [
+        $response = json_decode(Http::get('http://api:8000', [
             'query' => $request->input('query'),
         ])->body());
 
