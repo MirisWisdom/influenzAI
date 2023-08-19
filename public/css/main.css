@@ -1,0 +1,45 @@
+:root{
+    --bg-color: #212529;
+    --grey-color: #6C757C;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+.title {
+    position: fixed;
+    width: 100%;
+    height: max-content;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    z-index: 99;
+    padding: 8px 0;
+    background-color: grey;
+}
+.title a  {
+    color: aliceblue;
+    text-decoration: none;
+}
+.title h6{
+    text-decoration: underline;
+}
+.container {
+    position: relative;
+    top: 80px;
+    color: #212529;
+}
+.form-control{
+    border-width: 2px;
+    border-color: grey;
+}
+.form-control:focus{
+    border-color: grey;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px grey;
+}
+.card-header {
+    font-weight: 700;
+}
