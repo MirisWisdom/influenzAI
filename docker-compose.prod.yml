@@ -19,6 +19,11 @@ services:
       context: .
       target: caddy_prod
 
+  api:
+    build:
+      context: api
+      target: builder
+
 volumes:
   app_cache:
   app_storage:

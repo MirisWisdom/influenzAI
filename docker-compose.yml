@@ -43,9 +43,6 @@ services:
 
   api:
     image: ${IMAGES_PREFIX:-pkg.miris.design/miris/influenzai}/api:latest
-    build:
-      context: api
-      target: builder
     stop_signal: SIGINT
     ports:
       # HTTP

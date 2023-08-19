@@ -30,6 +30,9 @@ services:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
 
   api:
+    build:
+      context: api
+      target: builder
     volumes:
       - ./api/:/app
 
