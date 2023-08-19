@@ -62,3 +62,10 @@ InfluenzAI consists of three major components:
 ![architecture](./doc/architecture.svg)
 
 Using this architecture, the components remain decoupled and scalable. This opens up the opportunities for alternative UIs (e.g. mobile apps) and LLMs (e.g. LLaMA).
+
+## Instructions
+
+```
+python localGPTUI.py --host 0.0.0.0
+python run_localGPT_API.py --host 0.0.0.0 --device_type cuda
+```
