@@ -16,6 +16,26 @@ class DataSeeder extends Seeder
     {
         $data = [
             [
+                'name'     => 'Sick and tired: Casting a long shadow',
+                'path'     => 'https://parlinfo.aph.gov.au/parlInfo/download/committees/reportrep/RB000006/toc_pdf/SickandtiredCastingalongshadow.pdf',
+                'file'     => 'SickandtiredCastingalongshadow.pdf',
+                'keywords' => [
+                    'Covid'                                      => 'Topic Keyword',
+                    'Australian Institute of Health and Welfare' => 'Organisation Keyword',
+                    'Federal'                                    => 'Location Keyword'
+                ],
+            ],
+            [
+                'name'     => 'Caring for patients with post–COVID-19 conditions',
+                'path'     => 'https://drive.google.com/file/d/1ndcd_MaWDiBS4OvGtRHSMVuGAhk30xRc/view',
+                'file'     => 'RACGP - Caring for patients with post–COVID-19 conditions.pdf',
+                'keywords' => [
+                    'Long Covid'                                 => 'Topic Keyword',
+                    'Australian Institute of Health and Welfare' => 'Organisation Keyword',
+                    'Federal'                                    => 'Location Keyword'
+                ],
+            ],
+            [
                 'name'     => 'Acute rheumatic conditions',
                 'path'     => 'https://www.menzies.edu.au/icms_docs/253288_Acute_rheumatic_fever_and_rheumatic_heart_disease_clinical_audit_protocol.pdf',
                 'keywords' => [
