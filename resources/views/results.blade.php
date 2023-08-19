@@ -34,7 +34,7 @@
             <hr>
             <div class="card">
                 <div class="card-header text-center">
-                    SOURCE DATASETS
+                    ANSWER CONTEXT
                 </div>
                 <div class="card-body">
                     <div class="mt-1 row">
@@ -53,7 +53,37 @@
                     </div>
                 </div>
             </div>
+            <hr>
         @endif
+
+        <div class="card">
+            <div class="card-header text-center">
+                USED DATASETS
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    @foreach($documents as $document)
+                        <div class="col-md-4">
+                            <a href="{{ $document->path }}" class="btn btn-outline-light w-100" target="_blank">
+                                {{ $document->name }}
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="card">
+            <div class="card-header text-center">
+                CONNECTED DATASETS
+            </div>
+            <div class="card-body">
+                @include('categories.body')
+            </div>
+            <hr>
+        </div>
 
         <div class="position-fixed" style="bottom: 40px; margin: auto; width: 72%;">
             <hr>
@@ -63,13 +93,13 @@
                 <div class="row">
                     <div class="col-md">
                         <input type="text"
-                        name="query"
-                        class="form-control w-100 p-3 rounded-4 mt-2 ">
+                               name="query"
+                               class="form-control w-100 p-3 rounded-4 mt-2 ">
                     </div>
                     <div class="col-md-auto pl-4 pr-2">
                         <button type="submit"
-                        class="btn btn-secondary form-control p-3 rounded-4 mt-2">
-                        <i class="icon bi bi-send-fill"></i></button>
+                                class="btn btn-secondary form-control p-3 rounded-4 mt-2">
+                            <i class="icon bi bi-send-fill"></i></button>
                     </div>
                 </div>
                 <label class="w-100">
