@@ -102,7 +102,7 @@
             <hr>
         </div>
 
-        <div class="position-fixed" style="bottom: 40px; margin: auto; width: 72%;">
+        <div class="position-fixed" style="bottom: 40px; margin: auto; width: 72%; z-index:100;">
             <hr>
             <form action="{{ route('query') }}"
                   method="post">
