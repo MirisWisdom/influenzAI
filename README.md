@@ -55,7 +55,7 @@ In alphabetical order...
 | Member    | Role                              |
 | --------- | --------------------------------- |
 | David     | Data Analysis / Content Creator   |
-| Dhanush   | Lead Inquisitiveness              |
+| Dhanush   | Quality Assessment Lead           |
 | Emilian   | Lead Developer / Architect        |
 | Jacky     | Content Creator, Industry Insight |
 | Kien Pham | Website UI/UX Design              |
