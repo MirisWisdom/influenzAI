@@ -11,13 +11,15 @@ class QueryController extends Controller
     #[NoReturn]
     public function query(Request $request)
     {
-        $response = json_decode(Http::get('http://api:8000', [
+        $response = json_decode(Http::timeout(0)->get(config('app.api'), [
             'query' => $request->input('query'),
+            'demo' => $request->has('demo') ? 'yes' : 'no'
         ])->body());
 
         return view('welcome', [
             'query' => $response->query,
-            'results' => $response->result
+            'answer' => $response->answer,
+            'sources' => $response->sources
         ]);
     }
 }

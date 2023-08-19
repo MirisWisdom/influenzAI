@@ -19,6 +19,10 @@
                                name="query"
                                class="form-control w-100">
                     </label>
+                    <label class="w-100">
+                        <input type="checkbox" name="demo">
+                        Use demo page (super fast but query is ignored!)
+                    </label>
                 </div>
                 <div class="col-md-auto">
                     <label>
@@ -30,7 +34,7 @@
                 </div>
             </div>
         </form>
-        @if(isset($results))
+        @if(isset($sources))
             <hr>
             <div class="card">
                 <div class="card-header text-center">
@@ -40,19 +44,36 @@
                     {{ $query }}
                 </div>
             </div>
-            <div class="row">
-                @foreach($results as $result)
-                    <div class="col-md-6">
-                        <div class="card my-2">
-                            <div class="card-header text-center">
-                                {{ $result->document }}
+            <hr>
+            <div class="card">
+                <div class="card-header text-center">
+                    ANSWER FROM GPT
+                </div>
+                <div class="card-body">
+                    {{ $answer }}
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="card-header text-center">
+                    SOURCE DATASETS
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        @foreach($sources as $source)
+                            <div class="col-md-6">
+                                <div class="card my-2">
+                                    <div class="card-header text-center">
+                                        {{ $source->document }}
+                                    </div>
+                                    <div class="card-body">
+                                        {{ $source->context }}
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                {{ $result->body }}
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
         @endif
     </div>
