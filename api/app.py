@@ -8,7 +8,7 @@ app = Flask(__name__)
 def query():
     dmo = request.args.get('demo') == 'yes'
     qry = request.args.get('query')
-    url = 'http://100.64.128.29:5111/'
+    url = 'http://{}/'.format(request.args.get('instance'))
     obj = {'user_prompt': qry}
 
     if dmo:

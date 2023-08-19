@@ -13,6 +13,7 @@ services:
       start_period: 30s
     environment:
       API_ADDRESS: ${API_ADDRESS:-api:8000}
+      GPT_ADDRESS: ${GPT_ADDRESS:-100.64.128.29:5111}
       DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-!ChangeMe!}@database:5432/${POSTGRES_DB:-app}?serverVersion=${POSTGRES_VERSION:-15}&charset=${POSTGRES_CHARSET:-utf8}
 
   caddy:

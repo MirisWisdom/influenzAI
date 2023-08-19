@@ -13,7 +13,8 @@ class QueryController extends Controller
     {
         $response = json_decode(Http::timeout(0)->get(config('app.api'), [
             'query' => $request->input('query'),
-            'demo' => $request->has('demo') ? 'yes' : 'no'
+            'demo' => $request->has('demo') ? 'yes' : 'no',
+            'instance' => config('app.gpt')
         ])->body());
 
         return view('welcome', [
