@@ -32,7 +32,7 @@
                             <i class="icon bi bi-send-fill"></i></button>
                     </div>
                 </div>
-                <label class="w-100">
+                <label class="w-100 px-4 text-light">
                     <input type="checkbox" name="demo">
                     Use demo page (super fast but query is ignored!)
                 </label>
