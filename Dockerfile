@@ -85,6 +85,8 @@ COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
 FROM php_base AS php_prod
 
 ENV APP_ENV=production
+VOLUME /srv/app/storage/
+VOLUME /srv/app/bootstrap/cache/
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 COPY --link docker/php/conf.d/app.prod.ini $PHP_INI_DIR/conf.d/
