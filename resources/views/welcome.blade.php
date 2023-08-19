@@ -24,11 +24,11 @@
                     <div class="col-md">
                         <input type="text"
                                name="query"
-                               class="form-control w-100 p-3 rounded-4 mt-2 ">
+                               class="form-control w-100 p-3 rounded-4 mt-2" style="font-size: 24pt;">
                     </div>
                     <div class="col-md-auto pl-4 pr-2">
                         <button type="submit"
-                                class="btn btn-secondary form-control p-3 rounded-4 mt-2">
+                                class="btn btn-secondary form-control p-3 rounded-4 mt-2" style="font-size: 24pt;">
                             <i class="icon bi bi-send-fill"></i></button>
                     </div>
                 </div>
