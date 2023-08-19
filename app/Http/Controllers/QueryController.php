@@ -24,10 +24,10 @@ class QueryController extends Controller
             $documents  = Document::query();
 
             foreach ($response->sources as $source) {
-                $documents = $documents->orWhere('name', $source->document);
+                $documents = $documents->orWhere('file', $source->document);
 
                 $categories = $categories->orWhereHas('keywords.documents', function ($q) use ($source) {
-                    return $q->where('name', $source->document);
+                    return $q->where('file', $source->document);
                 });
             }
 

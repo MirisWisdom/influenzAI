@@ -10,7 +10,7 @@ class Document extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'path'];
+    protected $fillable = ['name', 'path', 'file'];
 
     public function keywords(): BelongsToMany
     {

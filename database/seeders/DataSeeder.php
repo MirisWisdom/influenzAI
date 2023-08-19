@@ -294,10 +294,8 @@ class DataSeeder extends Seeder
 
         foreach ($data as $datum) {
             $document = Document::query()->firstOrCreate(
-                [
-                    'name' => $datum['name'], 'path' => $datum['path']],
-                [
-                    'name' => $datum['name'], 'path' => $datum['path']],
+                ['name' => $datum['name'], 'path' => $datum['path'], 'file' => $datum['file'] ?? null],
+                ['name' => $datum['name'], 'path' => $datum['path'], 'file' => $datum['file'] ?? null],
             );
 
             foreach ($datum['keywords'] as $keyword => $category) {
