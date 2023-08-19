@@ -3,6 +3,7 @@ version: "3.4"
 # Production environment override
 services:
   php:
+    image: ${IMAGES_PREFIX:-pkg.miris.design/miris/influenzai}/php:latest
     build:
       context: .
       target: php_prod
@@ -15,11 +16,13 @@ services:
       APP_URL: ${APP_URL}
 
   caddy:
+    image: ${IMAGES_PREFIX:-pkg.miris.design/miris/influenzai}/caddy:latest
     build:
       context: .
       target: caddy_prod
 
   api:
+    image: ${IMAGES_PREFIX:-pkg.miris.design/miris/influenzai}/api:latest
     build:
       context: api
       target: builder

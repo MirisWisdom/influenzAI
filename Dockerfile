@@ -82,7 +82,7 @@ RUN set -eux; \
 COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
 
 # Prod PHP image
-FROM php_base AS php_prod
+FROM php_base AS php_composer
 
 ENV APP_ENV=production
 VOLUME /srv/app/storage/
@@ -106,9 +106,20 @@ RUN set -eux; \
 	php artisan config:cache --no-interaction; \
 	chmod +x artisan; sync;
 
+# build assets
+FROM node AS yarn_builder
+COPY --link --from=php_composer /srv/app /app/
+WORKDIR /app
+RUN yarn install
+RUN yarn vite build
+
+FROM php_composer AS php_prod
+COPY --from=yarn_builder --link /app/public /srv/app/public/
 
 # Base Caddy image
 FROM caddy_upstream AS caddy_base
+
+WORKDIR /srv/app
 
 COPY --link docker/caddy/Caddyfile /etc/caddy/Caddyfile
 
