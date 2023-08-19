@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\KeywordController;
 use App\Http\Controllers\QueryController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +22,8 @@ Route::get('/', function () {
 });
 
 Route::post('/query', [QueryController::class, 'query'])->name('query');
+
+Route::resource('categories', CategoryController::class);
 
 Route::middleware([
     'auth:sanctum',
