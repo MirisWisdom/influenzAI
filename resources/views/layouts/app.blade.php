@@ -26,7 +26,7 @@
     </style>
     <title>{{ config('app.name') }}</title>
 </head>
-<div id="particles-js" style="position: fixed; width: 100%; height: 100%;"></div>
+<div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -999;"></div>
 
 <body data-bs-theme="dark">
 @yield('content')
