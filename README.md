@@ -18,6 +18,8 @@ Of course, Long COVID and Influenza are a drop in the ocean - there are plenty o
 
 From a technical perspective, InfluenzAI has been architected with the intent of being modular and scalable. We can leverage container orchestration to scale up the project as necessary, with minimal difficulties.
 
+While InfluenzAI focuses on Influenza and long COVID, our long-term plan is to expand to other pathogens and use InfluenzAI as a stepping stone towards VirAI.
+
 ### Interactive and Visual
 
 To improve the depth of responses, we are building our own system which visualises government data using intuitive, useful charts and maps. This bespoke system would respond to known queries (e.g. "long covid trends in 2023") using visual responses, as a complement to the text-based responses from our LLM.
