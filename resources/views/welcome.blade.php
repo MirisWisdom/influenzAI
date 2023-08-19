@@ -32,7 +32,7 @@
                 </div>
                 <label class="w-100 px-4 text-light">
                     <input type="checkbox" name="demo">
-                    Use demo page (super fast but query is ignored!)
+                    For demo purposes, you should tick this box to use a cached, speedy, <i>working</i> query!
                 </label>
             </form>
         </div>
