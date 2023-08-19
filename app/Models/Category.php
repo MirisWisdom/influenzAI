@@ -10,6 +10,8 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function keywords(): BelongsToMany
     {
         return $this->belongsToMany(Keyword::class);

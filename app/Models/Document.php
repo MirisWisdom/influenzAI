@@ -10,6 +10,8 @@ class Document extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'path'];
+
     public function keywords(): BelongsToMany
     {
         return $this->belongsToMany(Keyword::class);
