@@ -1,0 +1,4 @@
+[submodule "api/gpt"]
+	path = api/gpt
+	url = https://github.com/PromtEngineer/localGPT.git
+	branch = main
