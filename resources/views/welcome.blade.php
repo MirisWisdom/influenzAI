@@ -8,22 +8,22 @@
         </a>
     </header>
     <div class="container w-75">
-        <div class="card">
-            <div class="card-header text-center">
-                SUBMITTED QUERY
-            </div>
-            <div class="card-body">
-                {{ $query }}
-            </div>
-        </div>
         @if(isset($sources))
+            <div class="card">
+                <div class="card-header text-center">
+                    SUBMITTED QUERY
+                </div>
+                <div class="card-body">
+                    {{ $query ?? 'N/A' }}
+                </div>
+            </div>
             <hr>
             <div class="card">
                 <div class="card-header text-center">
                     ANSWER FROM GPT
                 </div>
                 <div class="card-body">
-                    {{ $answer }}
+                    {{ $answer ?? 'N/A' }}
                 </div>
             </div>
             <hr>
@@ -37,10 +37,10 @@
                             <div class="col-md-6">
                                 <div class="card my-2">
                                     <div class="card-header text-center">
-                                        {{ $source->document }}
+                                        {{ $source->document ?? 'N/A' }}
                                     </div>
                                     <div class="card-body">
-                                        {{ $source->context }}
+                                        {{ $source->context ?? 'N/A' }}
                                     </div>
                                 </div>
                             </div>
