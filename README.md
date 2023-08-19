@@ -36,6 +36,21 @@ Our architecture and self-hosted model grants us control over our model, and thu
 
 To improve openness and transparency, we visually display all the documents/datasets used for our model. This allows our model to be scrutinised for any unintended biases, and provides users/stakeholders with confidence in the potential & quality of our model.
 
+## Our Team
+
+In alphabetical order...
+
+| Member    | Role                              |
+| --------- | --------------------------------- |
+| David     | Data Analysis / Content Creator   |
+| Dhanush   | Lead Inquisitiveness              |
+| Emilian   | Lead Developer / Architect        |
+| Jacky     | Content Creator, Industry Insight |
+| Kien Pham | Website UI/UX Design              |
+| Shann     | Data Analyst / Curator            |
+| Sudeep    | Graphic / Logo Design             |
+| William   | Project Manager / Content Creator |
+
 ## Architecture
 
 InfluenzAI consists of three major components:
