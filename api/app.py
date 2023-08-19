@@ -1,6 +1,7 @@
 from flask import *
 from bs4 import *
 import requests
+import random
 
 app = Flask(__name__)
 
@@ -12,7 +13,18 @@ def query():
     obj = {'user_prompt': qry}
 
     if dmo:
-        f = open("demo.html", "r")
+        questions = [
+            'How can COVID education be improved?',
+            'What is the burden of COVID on education in NSW',
+            'How do I diagnose and treat Long COVID',
+            'How many deaths were there from influenza in July and August 2023',
+            'What kind of symptoms were people getting from Long COVID?'
+        ]
+
+        selected = random.randint(0, 4)
+        qry = questions[selected]
+
+        f = open("demo-0{}.html".format(selected), "r")
         txt = f.read()
         f.close()
     else:
