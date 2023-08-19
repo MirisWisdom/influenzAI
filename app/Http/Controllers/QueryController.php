@@ -17,7 +17,7 @@ class QueryController extends Controller
             'instance' => config('app.gpt')
         ])->body());
 
-        return view('welcome', [
+        return view('results', [
             'query' => $response->query,
             'answer' => $response->answer,
             'sources' => $response->sources
