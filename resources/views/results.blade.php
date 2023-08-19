@@ -10,6 +10,9 @@
                 Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
                 from open, reputable government data.
             </p>
+            <a href="/" class="btn btn-outline-light btn-sm">
+                Go Home
+            </a>
         </div>
     </div>
     <hr>
