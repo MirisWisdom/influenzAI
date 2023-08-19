@@ -63,7 +63,6 @@
                     </div>
                     <div class="col-md-auto pl-4 pr-2">
                         <button type="submit"
-                        name="query"
                         class="btn btn-secondary form-control p-3 rounded-4 mt-2">
                         <i class="icon bi bi-send-fill"></i></button>
                     </div>
