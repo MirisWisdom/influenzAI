@@ -32,46 +32,64 @@
                 </div>
             </div>
             <hr>
-            <div class="card">
-                <div class="card-header text-center">
-                    ANSWER CONTEXT
-                </div>
-                <div class="card-body">
-                    <div class="mt-1 row">
-                        @foreach($sources as $source)
-                            <div class="col-md-6">
-                                <div class="card my-2">
-                                    <div class="card-header text-center">
-                                        {{ $source->document ?? 'N/A' }}
+            <div class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            ANSWER CONTEXT
+                        </div>
+                        <div class="card-body">
+                            <div class="mt-1 row">
+                                @foreach($sources as $source)
+                                    <div class="col-md-6">
+                                        <div class="card my-2">
+                                            <div class="card-header text-center">
+                                                <button class="btn btn-outline-light w-100" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse-source-{{ $loop->iteration }}"
+                                                        aria-expanded="false"
+                                                        aria-controls="collapse-source-{{ $loop->iteration }}">
+                                                    {{ $source->document ?? 'N/A' }} - CONTEXT {{ $loop->iteration }}
+                                                </button>
+                                            </div>
+                                            <div class="collapse" id="collapse-source-{{ $loop->iteration }}">
+                                                <div class="card-body">
+                                                    {{ $source->context ?? 'N/A' }}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="card-body">
-                                        {{ $source->context ?? 'N/A' }}
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
-                        @endforeach
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            USED DATASETS
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                @foreach($documents as $document)
+                                    <div class="col-md-6">
+                                        <div class="card my-2">
+                                            <div class="card-header text-center">
+                                                <a href="{{ $document->path }}" class="btn btn-outline-light w-100"
+                                                   target="_blank">
+                                                    {{ $document->name }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr>
         @endif
-
-        <div class="card">
-            <div class="card-header text-center">
-                USED DATASETS
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    @foreach($documents as $document)
-                        <div class="col-md-4">
-                            <a href="{{ $document->path }}" class="btn btn-outline-light w-100" target="_blank">
-                                {{ $document->name }}
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
 
         <hr>
 
