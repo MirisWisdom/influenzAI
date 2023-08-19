@@ -20,7 +20,7 @@
           font-family: "Manrope", sans-serif !important;
     }
     </style>
-    <title>Document</title>
+    <title>{{ config('app.name') }}</title>
 </head>
 <body data-bs-theme="dark">
 @yield('content')

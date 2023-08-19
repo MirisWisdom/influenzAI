@@ -3,8 +3,13 @@
 @section('content')
     <header class="title d-none">
         <a href="/" class="text-center">
-            <h2>InfluenzeAI</h2>
-            <h6><i>By yours truly, G2</i></h6>
+            <h2>{{ config('app.name') }}</h2>
+            <h6>
+                <i>
+                    Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
+                    from open, reputable government data.
+                </i>
+            </h6>
         </a>
     </header>
     <div class="container w-75">
@@ -49,7 +54,7 @@
                 </div>
             </div>
         @endif
-        
+
         <div class="position-fixed" style="bottom: 40px; margin: auto; width: 72%;">
             <hr>
             <form action="{{ route('query') }}"
