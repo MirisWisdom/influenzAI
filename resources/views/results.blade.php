@@ -13,6 +13,30 @@
             <a href="/" class="btn btn-outline-light btn-sm">
                 Go Home
             </a>
+            <hr>
+            <form action="{{ route('query') }}"
+                  method="post">
+                @csrf
+                <div class="row">
+                    <div class="col-md">
+                        <label class="w-100">
+                            <input type="text"
+                                   name="query"
+                                   class="form-control w-100 p-3 rounded-4 mt-2"
+                                   placeholder="Type your prompt...">
+                        </label>
+                    </div>
+                    <div class="col-md-auto pl-4 pr-2">
+                        <button type="submit"
+                                class="btn btn-secondary form-control p-3 rounded-4 mt-2">
+                            <i class="icon bi bi-send-fill"></i></button>
+                    </div>
+                </div>
+                <label class="w-100 px-4 text-light">
+                    <input type="checkbox" name="demo">
+                    Use demo page (super fast but query is ignored!)
+                </label>
+            </form>
         </div>
     </div>
     <hr>
@@ -109,30 +133,6 @@
                 @include('categories.body')
             </div>
             <hr>
-        </div>
-
-        <div class="position-fixed" style="bottom: 40px; margin: auto; width: 72%; z-index:100;">
-            <hr>
-            <form action="{{ route('query') }}"
-                  method="post">
-                @csrf
-                <div class="row">
-                    <div class="col-md">
-                        <input type="text"
-                               name="query"
-                               class="form-control w-100 p-3 rounded-4 mt-2 ">
-                    </div>
-                    <div class="col-md-auto pl-4 pr-2">
-                        <button type="submit"
-                                class="btn btn-secondary form-control p-3 rounded-4 mt-2">
-                            <i class="icon bi bi-send-fill"></i></button>
-                    </div>
-                </div>
-                <label class="w-100 px-4 text-light">
-                    <input type="checkbox" name="demo">
-                    Use demo page (super fast but query is ignored!)
-                </label>
-            </form>
         </div>
     </div>
 @endsection

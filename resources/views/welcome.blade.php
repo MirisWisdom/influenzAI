@@ -11,20 +11,18 @@
                 Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
                 from open, reputable government data.
             </p>
-        </div>
-    </div>
-    <hr>
-    <div class="container w-75">
-        <div class="mb-5">
             <hr>
             <form action="{{ route('query') }}"
                   method="post">
                 @csrf
                 <div class="row">
                     <div class="col-md">
-                        <input type="text"
-                               name="query"
-                               class="form-control w-100 p-3 rounded-4 mt-2" style="font-size: 24pt;">
+                        <label class="w-100">
+                            <input type="text"
+                                   name="query"
+                                   class="form-control w-100 p-3 rounded-4 mt-2" style="font-size: 24pt;"
+                                   placeholder="Type your prompt...">
+                        </label>
                     </div>
                     <div class="col-md-auto pl-4 pr-2">
                         <button type="submit"
@@ -37,6 +35,11 @@
                     Use demo page (super fast but query is ignored!)
                 </label>
             </form>
+        </div>
+    </div>
+    <hr>
+    <div class="container w-75">
+        <div class="mb-5">
             <hr>
             <div class="row">
                 <div class="col-md-12 text-light mb-5">
