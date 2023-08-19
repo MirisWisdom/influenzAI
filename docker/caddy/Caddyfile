@@ -11,7 +11,9 @@ log
 
 route {
     root * /srv/app/public
-    php_fastcgi unix//var/run/php/php-fpm.sock
+    php_fastcgi unix//var/run/php/php-fpm.sock {
+        trusted_proxies private_ranges 0.0.0.0/0
+    }
     encode zstd gzip
     file_server
 }
