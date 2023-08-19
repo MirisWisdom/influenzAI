@@ -1,17 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <header class="title d-none">
-        <a href="/" class="text-center">
-            <h2>{{ config('app.name') }}</h2>
-            <h6>
-                <i>
-                    Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
-                    from open, reputable government data.
-                </i>
-            </h6>
-        </a>
-    </header>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">{{ config('app.name') }}</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
+                from open, reputable government data.
+            </p>
+        </div>
+    </div>
+    <hr>
     <div class="container w-75">
         @if(isset($sources))
             <div class="card">
