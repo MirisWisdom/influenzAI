@@ -31,6 +31,8 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+    'api' => env('API_ADDRESS', 'api:8000'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
