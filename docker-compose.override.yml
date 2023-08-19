@@ -29,6 +29,10 @@ services:
       - ./public:/srv/app/public:ro
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
 
+  api:
+    volumes:
+      - ./api/:/app
+
   database:
     ports:
       - 5432:5432
