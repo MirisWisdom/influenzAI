@@ -1,6 +1,16 @@
+<html>
+    <p align='center'>
+        <img src='./doc/banner.png'>
+    </p>
+</html>
+
 # influenzAI
 
 *Conveniently providing trustworthy information to people suffering from Influenza and Long COVID, using AI trained on reputable government data, and with an emphasis on privacy.*
+
+| Landing Page                 | Query Results                | Connected Datasets           |
+| ---------------------------- | ---------------------------- | ---------------------------- |
+| ![](./doc/screenshot-01.png) | ![](./doc/screenshot-02.png) | ![](./doc/screenshot-03.png) |
 
 ## Our Mission
 
