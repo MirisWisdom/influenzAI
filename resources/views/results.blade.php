@@ -2,7 +2,9 @@
 
 @section('content')
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold">{{ config('app.name') }}</h1>
+        <h1 class="display-5 fw-bold" style="font-family: 'Josefin Sans', sans-serif !important;">
+            influenz<span style="color: #e69138">AI</span>
+        </h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">
                 Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
@@ -18,7 +20,9 @@
                     SUBMITTED QUERY
                 </div>
                 <div class="card-body">
-                    {{ $query ?? 'N/A' }}
+                    <span style="color: #e69138; font-size: 24pt;">
+                        {{ $query ?? 'N/A' }}
+                    </span>
                 </div>
             </div>
             <hr>
@@ -27,7 +31,9 @@
                     ANSWER FROM GPT
                 </div>
                 <div class="card-body">
-                    {{ $answer ?? 'N/A' }}
+                    <span style="color: #e69138; font-size: 16pt;">
+                        {{ $answer ?? 'N/A' }}
+                    </span>
                 </div>
             </div>
             <hr>

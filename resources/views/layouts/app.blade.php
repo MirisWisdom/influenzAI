@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script type="text/javascript" src="{{ asset('particles.min.js') }}"></script>
 
     <style>
     *{
@@ -26,7 +26,14 @@
     </style>
     <title>{{ config('app.name') }}</title>
 </head>
+<div id="particles-js" style="position: fixed; width: 100%; height: 100%;"></div>
+
 <body data-bs-theme="dark">
 @yield('content')
+<script>
+    particlesJS.load('particles-js', '/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
 </body>
 </html>
