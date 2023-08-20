@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold" style="font-family: 'Josefin Sans', sans-serif !important;">
+        <h1 class="display-5 fw-bold"
+            style="font-family: 'Josefin Sans', sans-serif !important;">
             influenz<span style="color: #e69138">AI</span>
         </h1>
         <div class="col-lg-6 mx-auto">
@@ -10,7 +11,8 @@
                 Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information
                 from open, reputable government data.
             </p>
-            <a href="/" class="btn btn-outline-light btn-sm">
+            <a href="/"
+               class="btn btn-outline-light btn-sm">
                 Go Home
             </a>
             <hr>
@@ -33,7 +35,8 @@
                     </div>
                 </div>
                 <label class="w-100 px-4 text-light">
-                    <input type="checkbox" name="demo">
+                    <input type="checkbox"
+                           name="demo">
                     For demo purposes, you should tick this box to use a cached, speedy, working query!
                     <br>
                     This will ignore the user entered query and show a pre-generated query and answer pair.
@@ -80,7 +83,8 @@
                                     <div class="col-md-6">
                                         <div class="card my-2">
                                             <div class="card-header text-center">
-                                                <button class="btn btn-outline-light w-100" type="button"
+                                                <button class="btn btn-outline-light w-100"
+                                                        type="button"
                                                         data-bs-toggle="collapse"
                                                         data-bs-target="#collapse-source-{{ $loop->iteration }}"
                                                         aria-expanded="false"
@@ -88,7 +92,8 @@
                                                     {{ $source->document ?? 'N/A' }} - CONTEXT {{ $loop->iteration }}
                                                 </button>
                                             </div>
-                                            <div class="collapse" id="collapse-source-{{ $loop->iteration }}">
+                                            <div class="collapse"
+                                                 id="collapse-source-{{ $loop->iteration }}">
                                                 <div class="card-body">
                                                     {{ $source->context ?? 'N/A' }}
                                                 </div>
@@ -111,7 +116,8 @@
                                     <div class="col-md-6">
                                         <div class="card my-2">
                                             <div class="card-header text-center">
-                                                <a href="{{ $document->path }}" class="btn btn-outline-light w-100"
+                                                <a href="{{ $document->path }}"
+                                                   class="btn btn-outline-light w-100"
                                                    target="_blank">
                                                     {{ $document->name }}
                                                 </a>

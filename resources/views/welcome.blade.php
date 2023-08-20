@@ -3,7 +3,8 @@
 @section('content')
 
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold" style="font-size: 72pt; font-family: 'Josefin Sans', sans-serif !important;">
+        <h1 class="display-5 fw-bold"
+            style="font-size: 72pt; font-family: 'Josefin Sans', sans-serif !important;">
             influenz<span style="color: #e69138">AI</span>
         </h1>
         <div class="col-lg-6 mx-auto">
@@ -20,18 +21,21 @@
                         <label class="w-100">
                             <input type="text"
                                    name="query"
-                                   class="form-control w-100 p-3 rounded-4 mt-2" style="font-size: 24pt;"
+                                   class="form-control w-100 p-3 rounded-4 mt-2"
+                                   style="font-size: 24pt;"
                                    placeholder="Type your prompt...">
                         </label>
                     </div>
                     <div class="col-md-auto pl-4 pr-2">
                         <button type="submit"
-                                class="btn btn-secondary form-control p-3 rounded-4 mt-2" style="font-size: 24pt;">
+                                class="btn btn-secondary form-control p-3 rounded-4 mt-2"
+                                style="font-size: 24pt;">
                             <i class="icon bi bi-send-fill"></i></button>
                     </div>
                 </div>
                 <label class="w-100 px-4 text-light">
-                    <input type="checkbox" name="demo">
+                    <input type="checkbox"
+                           name="demo">
                     For demo purposes, you should tick this box to use a cached, speedy, working query!
                     <br>
                     This will ignore the user entered query and show a pre-generated query and answer pair.
