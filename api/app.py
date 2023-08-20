@@ -7,13 +7,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def query():
-    dmo = request.args.get('demo') == 'yes'
-    qry = request.args.get('query')
-    url = 'http://{}/'.format(request.args.get('instance'))
-    obj = {'user_prompt': qry}
+    # Inbound parameters (usually from the influenzAI website)
+    demo_mode = request.args.get('demo') == 'yes'
+    user_prompt = request.args.get('query')
+    gpt_instance = 'http://{}/'.format(request.args.get('instance'))
 
-    if dmo:
-        questions = [
+    # Demo vs Real Mode Handling
+    # ==========================
+    # -   Demo mode uses cached prompts and responses from localGPT
+    # -   Real mode tries to query to the localGPT instance
+    # -   Both modes parse the localGPT HTML response into an useful object
+    if demo_mode:
+        demo_prompts = [
             'How can COVID education be improved?',
             'What is the burden of COVID on education in NSW',
             'How do I diagnose and treat Long COVID',
@@ -21,18 +26,32 @@ def query():
             'What kind of symptoms were people getting from Long COVID?'
         ]
 
-        selected = random.randint(0, 4)
-        qry = questions[selected]
+        # For variety, the demo mode will select a random prompt
+        demo_prompt = random.randint(0, 4)
+        user_prompt = demo_prompts[demo_prompt]
+        prompt_file = "demo-0{}.html".format(demo_prompt)
 
-        f = open("demo-0{}.html".format(selected), "r")
-        txt = f.read()
-        f.close()
+        cached_response = open(prompt_file, "r")
+        gpt_response = cached_response.read()
+        cached_response.close()
     else:
-        txt = requests.post(url, obj).content
+        gpt_submission = {'user_prompt': user_prompt}
+        gpt_response = requests.post(gpt_instance, gpt_submission).content
 
-    bs4 = BeautifulSoup(txt, 'html.parser')
+    # Parse localGPT HTML -- we work backwards by:
+    #
+    # 1.  Find the <strong>Sources</strong> element
+    # 2.  Find the element's *parent*
+    # 3.  Find document and context elements, where:
+    #
+    #     -   Document = File name, found in the text of the accordion button
+    #     -   Context  = Contents used by localGPT, found in the accordion body
+    #
+    # We build an object representing each source (document and context)
+    # and add it to the list of sources we will return.
+    soup = BeautifulSoup(gpt_response, 'html.parser')
 
-    parent = bs4.find('strong', string='Sources').find_parent('div')
+    parent = soup.find('strong', string='Sources').find_parent('div')
     answer = parent.find_all('p')[1].getText().strip()
     sources = []
 
@@ -45,9 +64,10 @@ def query():
             'context': context.strip()
         })
 
+    # JSON response returned to the client -- compatible with the influenzAI UI.
     return {
-        'instance': url,
-        'query': qry,
+        'instance': gpt_instance,
+        'query': user_prompt,
         'answer': answer,
         'sources': sources
     }
