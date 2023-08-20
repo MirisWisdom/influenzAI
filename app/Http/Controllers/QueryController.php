@@ -16,7 +16,7 @@ class QueryController extends Controller
         try {
             $response = json_decode(Http::timeout(0)->get(config('app.api'), [
                 'query'    => $request->has('demo') ? 'How can COVID education be improved?' : $request->input('query'),
-                'demo'     => $request->has('demo') ? 'yes' : 'no',
+                'demo'     => $request->has('demo') ? 'yes' : 'no', // a bit nasty, we could use a bool value instead!
                 'instance' => config('app.gpt')
             ])->body());
 
