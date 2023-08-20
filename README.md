@@ -14,7 +14,13 @@
 
 ## Our Mission
 
-During the COVID pandemic, we have seen an incredible amount of misinformation spreading on the Internet. An effective mitigation is allowing easy, convenient and intuitive access to reputable information. This is where influenzAI tries to fill in the gap, by allowing the user to query a model trained on trusted, reputable open government data.
+During the COVID pandemic, we have seen an incredible explosion of information. However, clinicians are unable to efficiently incorporate the ever-expanding sea of data into their clinical practice. An effective mitigation is leverage emergeing generative AI technology to allow easy, convenient and intuitive access to reputable information.
+
+This is where InfluenzAI tries to fill in the gap. It is a generative AI solution powered by LocalGPT that allows clinicians to query a model trained on trusted, reputable open government data. By ethically curating the data we ingest onto the large language model, we strive to mitigate bias and influence, and aim for inclusivity and neutrality.
+
+While currently targeted at busy clinicians, we believe that there is an opportunity in education for healthcare students to utilise this platform. InfluenzAI will show the source data and related data used to generate its answers, thus making it a convenient yet comprehensive medical resource.
+
+Data security and patient privacy is paramount, thus we self-hosted the large language model ourselves and made sure that no patient identifiable information are stored, let alone sent out to third parties. For transparency and discoverability, InfluenzAI will show you the exact datasets used to respond to the query. Furthermore, it will show you *related* datasets to broaden your knowledge and understanding.
 
 ### Accessibility
 
