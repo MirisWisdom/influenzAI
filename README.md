@@ -88,3 +88,7 @@ Using this architecture, the components remain decoupled and scalable. This open
 python localGPTUI.py --host 0.0.0.0
 python run_localGPT_API.py --host 0.0.0.0 --device_type cuda
 ```
+
+## Attributes
+
+- localGPT: https://github.com/PromtEngineer/localGPT
