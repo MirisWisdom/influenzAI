@@ -6,7 +6,7 @@
 
 # influenzAI
 
-*Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information from open, reputable government data.*
+*A revolutionary clinical decision support tool leveraging generative AI to provide on-demand evidence-based insights and recommendations to clinicians regarding long COVID and influenza, utilising its curated healthcare knowledge repository of health care data.*
 
 |                              |                              |                              |
 | ---------------------------- | ---------------------------- | ---------------------------- |
