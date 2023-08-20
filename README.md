@@ -52,16 +52,16 @@ To improve openness and transparency, we visually display all the documents/data
 
 In alphabetical order...
 
-| Member    | Role                              |
-| --------- | --------------------------------- |
-| David     | Data Analysis / Content Creator   |
-| Dhanush   | Quality Assessment Lead           |
-| Emilian   | Lead Developer / Architect        |
-| Jacky     | Content Creator, Industry Insight |
-| Kien Pham | Website UI/UX Design              |
-| Shann     | Data Analyst / Curator            |
-| Sudeep    | Graphic / Logo Design             |
-| William   | Project Manager / Content Creator |
+| Member    | Role                                   |
+| --------- | -------------------------------------- |
+| David     | Data Analysis / Content Creator        |
+| Dhanush   | Quality Assessment Lead                |
+| Emilian   | Lead Developer / Architect / UI Layout |
+| Jacky     | Content Creator, Industry Insight      |
+| Kien Pham | Website UI/UX Design                   |
+| Shann     | Data Analyst / Curator / Narrator      |
+| Sudeep    | Graphic / Logo Design                  |
+| William   | Project Manager / Content Creator      |
 
 ## Architecture
 
