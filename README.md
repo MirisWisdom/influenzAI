@@ -25,7 +25,6 @@ Data security and patient privacy is paramount, thus we self-hosted the large la
 ### Accessibility
 
 1. Querying is done using natural language prompts, instead of scrolling through oceans of documents. A person should not need to think like a computer when querying answers!
-2. Using features such as voice to text, we improve convenience by reducing typing on phones for busy medical practitioners, and emphasising on accessibility to people new to this technology.
 3. A minimalist, responsive UI which focuses on the queries and responses. With this project's architecture, different UIs can be built for different kinds of scenarios and devices.
 
 ### Scaling Potentials
