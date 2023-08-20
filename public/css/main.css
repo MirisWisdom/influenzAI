@@ -43,3 +43,8 @@
 .card-header {
     font-weight: 700;
 }
+.form-check {
+    font-size: 22px;
+    margin-left: calc(18% - 8px);
+    padding: 8px 0;
+}
