@@ -55,10 +55,10 @@
             <div class="row">
                 <div class="col-md-12 text-light mb-5" id="description">
                     <i>
-                        During the COVID pandemic, we have seen an incredible amount of misinformation spreading on the
-                        Internet. An effective mitigation is allowing easy, convenient and intuitive access to reputable
-                        information. This is where influenzAI tries to fill in the gap, by allowing the user to query a
-                        model trained on trusted, reputable open government data.
+                        During the COVID pandemic, we have seen an incredible explosion of information. However,
+                        clinicians are unable to efficiently incorporate the ever-expanding sea of data into their
+                        clinical practice. An effective mitigation is leverage emergeing generative AI technology to
+                        allow easy, convenient and intuitive access to reputable information.
                     </i>
                 </div>
                 <div class="col-md">
