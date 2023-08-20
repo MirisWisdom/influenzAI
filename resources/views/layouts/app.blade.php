@@ -57,6 +57,7 @@
 
 <body data-bs-theme="dark">
 @yield('content')
+<script src="{{ asset('js/script.js')}}"></script>
 <script>
     particlesJS.load('particles-js', '/particles.json', function () {
         console.log('callback - particles.js config loaded');

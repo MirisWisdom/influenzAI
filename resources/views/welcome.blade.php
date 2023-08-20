@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault" id="SwitchLabel">Dark</label>
+    </div>
     <div class="px-4 py-5 my-5 text-center">
         <h1 class="display-5 fw-bold"
             style="font-size: 72pt; font-family: 'Josefin Sans', sans-serif !important;">
@@ -33,7 +36,7 @@
                             <i class="icon bi bi-send-fill"></i></button>
                     </div>
                 </div>
-                <label class="w-100 px-4 text-light">
+                <label id="label-checkbox" class="w-100 px-4 text-light">
                     <input type="checkbox"
                            name="demo">
                     For demo purposes, you should tick this box to use a cached, speedy, working query!
@@ -50,7 +53,7 @@
         <div class="mb-5">
             <hr>
             <div class="row">
-                <div class="col-md-12 text-light mb-5">
+                <div class="col-md-12 text-light mb-5" id="description">
                     <i>
                         During the COVID pandemic, we have seen an incredible amount of misinformation spreading on the
                         Internet. An effective mitigation is allowing easy, convenient and intuitive access to reputable
