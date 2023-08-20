@@ -80,10 +80,10 @@
                             <ul>
                                 <li><b>David</b>: Data Analysis / Content Creator</li>
                                 <li><b>Dhanush</b>: Lead Inquisitiveness</li>
-                                <li><b>Emilian</b>: Lead Developer / Architect</li>
+                                <li><b>Emilian</b>: Lead Developer / Architect / UI Layout</li>
                                 <li><b>Jacky</b>: Content Creator, Industry Insight</li>
                                 <li><b>Kien Pham</b>: Website UI/UX Design</li>
-                                <li><b>Shann</b>: Data Analyst / Curator</li>
+                                <li><b>Shann</b>: Data Analyst / Curator / Narrator</li>
                                 <li><b>Sudeep</b>: Graphic / Logo Design</li>
                                 <li><b>William</b>: Project Manager / Content Creator</li>
                             </ul>
