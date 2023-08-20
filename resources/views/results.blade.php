@@ -34,7 +34,9 @@
                 </div>
                 <label class="w-100 px-4 text-light">
                     <input type="checkbox" name="demo">
-                    For demo purposes, you should tick this box to use a cached, speedy, <i>working</i> query!
+                    For demo purposes, you should tick this box to use a cached, speedy, working query!
+                    <br>
+                    This will ignore the user entered query and show a pre-generated query and answer pair.
                 </label>
             </form>
         </div>
