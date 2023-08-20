@@ -8,7 +8,7 @@
 
 *Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information from open, reputable government data.*
 
-| Landing Page                 | Query Results                | Connected Datasets           |
+|                              |                              |                              |
 | ---------------------------- | ---------------------------- | ---------------------------- |
 | ![](./doc/screenshot-01.png) | ![](./doc/screenshot-02.png) | ![](./doc/screenshot-03.png) |
 
