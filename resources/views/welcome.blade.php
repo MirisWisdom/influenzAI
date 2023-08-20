@@ -35,6 +35,8 @@
                     For demo purposes, you should tick this box to use a cached, speedy, working query!
                     <br>
                     This will ignore the user entered query and show a pre-generated query and answer pair.
+                    <br>
+                    It will save you time, and it will spare us from using a fire extinguisher on our hardware!
                 </label>
             </form>
         </div>
