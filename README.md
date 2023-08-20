@@ -71,11 +71,12 @@ In alphabetical order...
 
 ## Architecture
 
-InfluenzAI consists of three major components:
+InfluenzAI consists of four major components:
 
-1. The InfluenzAI Web Interface, a PHP platform which provides a minimalist and beautiful UI to the end-user for querying and responses;
-2. The InfluenzAI Brdiging API, which sits in-between the Web Interface and the LLM back-end (LocalGPT for our prototype).
-3. The back-end LLM, which ingests the provided open government data and responded to the inbound user queries.
+1. The InfluenzAI Web Interface, a PHP platform which provides a minimalist and beautiful UI to the end-user for querying and responses.
+2. The InfluenzAI Database, which stores metadata (name, source, keywords, etc.) for the documents fed into localGPT. Using this metadata, we can provide accurate *and* related datasets relevant to the query.
+3. The InfluenzAI Brdiging API, which sits in-between the Web Interface and the LLM back-end (LocalGPT for our prototype).
+4. The back-end LLM, which ingests the provided open government data and responded to the inbound user queries.
 
 ![architecture](./doc/architecture.svg)
 
