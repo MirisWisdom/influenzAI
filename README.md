@@ -6,7 +6,7 @@
 
 # influenzAI
 
-*Conveniently providing trustworthy information to people suffering from Influenza and Long COVID, using AI trained on reputable government data, and with an emphasis on privacy.*
+*Using AI to provide convenient, private, trustworthy access to Long COVID & Influenza information from open, reputable government data.*
 
 | Landing Page                 | Query Results                | Connected Datasets           |
 | ---------------------------- | ---------------------------- | ---------------------------- |

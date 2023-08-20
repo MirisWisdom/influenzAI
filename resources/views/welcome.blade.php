@@ -2,8 +2,12 @@
 
 @section('content')
     <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault" id="SwitchLabel">Dark</label>
+        <input class="form-check-input"
+               type="checkbox"
+               id="flexSwitchCheckDefault">
+        <label class="form-check-label"
+               for="flexSwitchCheckDefault"
+               id="SwitchLabel">Dark</label>
     </div>
     <div class="px-4 py-5 my-5 text-center">
         <h1 class="display-5 fw-bold"
@@ -36,7 +40,8 @@
                             <i class="icon bi bi-send-fill"></i></button>
                     </div>
                 </div>
-                <label id="label-checkbox" class="w-100 px-4 text-light">
+                <label id="label-checkbox"
+                       class="w-100 px-4 text-light">
                     <input type="checkbox"
                            name="demo">
                     For demo purposes, you should tick this box to use a cached, speedy, working query!
@@ -53,7 +58,8 @@
         <div class="mb-5">
             <hr>
             <div class="row">
-                <div class="col-md-12 text-light mb-5" id="description">
+                <div class="col-md-12 text-light mb-5"
+                     id="description">
                     <i>
                         During the COVID pandemic, we have seen an incredible explosion of information. However,
                         clinicians are unable to efficiently incorporate the ever-expanding sea of data into their
